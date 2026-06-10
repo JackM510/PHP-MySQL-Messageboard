@@ -1,4 +1,4 @@
-# Portfolio-User-Registry
+# PHP Messageboard
 
 A fully-featured PHP Messageboard application with complete CRUD functionality for users, profiles, posts, and comments. Built with Bootstrap 5, HTML, CSS, JavaScript, PHP, and MySQL, this project demonstrates a responsive, production‑style client–server application. It includes 15 pre‑loaded user profiles and over 20 sample posts to illustrate how the live Messageboard feed would appear in a real‑world environment.
 
