@@ -1,10 +1,13 @@
 <?php
+$env = parse_ini_file(__DIR__ . '/../.env');
 try {
-    // Simple PDO connection
-    $pdo = new PDO('mysql:host=localhost;dbname=messageboard', 'jackm', 'Zr8!vLx@29eQ#fT1');
+    $pdo = new PDO(
+        "mysql:host={$env['DB_HOST']};dbname={$env['DB_NAME']};charset=utf8mb4",
+        $env['DB_USER'],
+        $env['DB_PASS']
+    );
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
-    // Catch connection errors
     die("Connection failed: " . $e->getMessage());
 }
 ?>
