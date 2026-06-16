@@ -1,6 +1,6 @@
 <?php
 // Root pathways
-define('APP_BASE_PATH', '/PHP-User-Messageboard');
+define('APP_BASE_PATH', '/PHP-MySQL-Messageboard');
 define('APP_ROOT', __DIR__);
 // Includes (server-side)
 define('HEAD_INC', APP_ROOT . '/includes/head.php');
