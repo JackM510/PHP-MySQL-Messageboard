@@ -43,14 +43,13 @@
     <?php require_once (NAV_INC); ?>
     <div>
         <!-- Profile section -->
-        <div id="profile-container" class="container-fluid pt-5">
+        <div id="profile-container" class="container-fluid pt-5 shadow-sm">
             <!-- Profile details -->
             <div id="profile-details" class="m-auto fade-in">
                 <!-- Profile picture -->
                 <div id="profile-picture-container">
                     <img id="profile-picture" class="rounded-pill" src="<?= APP_BASE_PATH . "/" . htmlentities($profile_picture); ?>" alt="Profile Picture">
                 </div>
-
                 <!-- Name + edit icon -->
                 <div id="profile-details-container">
                     <div class="d-flex align-items-center justify-content-between mt-3">
@@ -68,28 +67,28 @@
                         <!-- Admin specifc details -->
                         <?php if ($isAdmin): ?>
                             <!-- Email -->
-                            <div class="col-12 order-0 col-lg-6 order-lg-0"> 
+                            <div class="col-12 order-0 col-sm-6 order-lg-0"> 
                                 <p id="profile-email" ><strong>Email: </strong><?php echo !empty($email) ? htmlentities($email) : 'N/A'; ?></p>
                             </div> 
                             <!-- Profile -->
-                            <div class="col-12 order-1 offset-lg-1 col-lg-5 order-lg-1">  
+                            <div class="col-12 order-1 col-sm-6 offset-lg-1 col-lg-5 order-lg-1">  
                                 <p id="profile-id"><strong>Profile ID: </strong><?php echo !empty($profile_id) ? htmlentities($profileId) : 'N/A'; ?></p>
                             </div>
                         <?php endif; ?>
                         <!-- Location -->
-                        <div class="col-12 order-4 col-lg-6 order-lg-2"> 
+                        <div class="col-12 order-4 col-md-6 order-lg-2"> 
                             <p id="profile-location" ><strong>Location: </strong><?php echo !empty($location) ? htmlentities($location) : 'N/A'; ?></p>
                         </div>            
                         <!-- Joined Date -->
-                        <div class="col-12 order-2 offset-lg-1 col-lg-5 order-lg-3">  
-                            <p id="profile-joined-date"><strong>Joined On: </strong><?php echo !empty($joined) ? htmlentities($joined) : 'N/A'; ?></p>
+                        <div class="col-12 order-2 col-sm-6 offset-lg-1 col-lg-5 order-lg-3">  
+                            <p id="profile-joined-date"><strong>Joined: </strong><?php echo !empty($joined) ? htmlentities($joined) : 'N/A'; ?></p>
                         </div>
                         <!-- Occupation -->
-                        <div class="col-12 order-5 col-lg-6 order-lg-4">
+                        <div class="col-12 order-5 col-md-6 order-lg-4">
                             <p id="profile-occupation"><strong>Occupation: </strong><?php echo !empty($occupation) ? htmlentities($occupation) : 'N/A'; ?></p>
                         </div>            
                         <!-- Age -->
-                        <div class="col-12 order-3 offset-lg-1 col-lg-5 order-lg-5">
+                        <div class="col-12 order-3 col-sm-6 offset-lg-1 col-lg-5 order-lg-5">
                             <p id="profile-age"><strong>Age: </strong><?php echo !empty($age) ? htmlentities($age) : 'N/A'; ?></p>
                         </div>
                         <!-- Bio -->
@@ -118,12 +117,12 @@
                             </label>
                         </div>
                         <!-- First Name -->
-                        <div class="col-12 col-lg-6 mb-3">
+                        <div class="col-12 col-sm-6 mb-3">
                             <label class="pb-1" for="first_name"><strong>First Name</strong></label>
                             <input id="first-name-input" class="form-control" type="text" name="first_name" value="<?php echo !empty($first_name) ? htmlentities($first_name) : "N/A"; ?>" maxlength="25" disabled required>
                         </div>
                         <!-- Last Name -->
-                        <div class="col-12 col-lg-6 mb-3">
+                        <div class="col-12 col-sm-6 mb-3">
                             <label class="pb-1" for="last_name"><strong>Last Name</strong></label>
                             <input id="last-name-input" class="form-control" type="text" name="last_name" value="<?php echo !empty($last_name) ? htmlentities($last_name) : "N/A"; ?>" maxlength="25" disabled required>
                         </div>
@@ -150,7 +149,7 @@
                     </div>
                 </form>
             </div>
-            <hr class="mt-3">
+            <hr>
         </div>
         
         <!-- Posts -->

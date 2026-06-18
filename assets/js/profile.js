@@ -38,11 +38,14 @@ document.addEventListener("DOMContentLoaded", function () {
         locationInput.setAttribute("disabled", "true");
         bioTextarea.setAttribute("disabled", "true");
         // Assign original values
+        profilePicImg.src = originalValues.profilePicture;
+        profilePicInput.value = "";
         firstNameInput.value = originalValues.first;
         lastNameInput.value = originalValues.last;
         occupationInput.value = originalValues.occupation;
         locationInput.value = originalValues.location;
         bioTextarea.value = originalValues.bio;
+        profilePicImg
         // Hide Update profile
         updateForm.style.display = 'none';
         updateForm.classList.remove("d-flex", "flex-column", "justify-content-center");
@@ -65,13 +68,13 @@ document.addEventListener("DOMContentLoaded", function () {
             e.stopPropagation();
             // Get original values of inputs
             originalValues = {
+                profilePicture: profilePicImg.src,
                 first: firstNameInput.value,
                 last: lastNameInput.value,
                 occupation: occupationInput.value,
                 location: locationInput.value,
                 bio: bioTextarea.value
             };
-
             //Remove disabled attribute from form elements
             firstNameInput.removeAttribute("disabled");
             lastNameInput.removeAttribute("disabled");
