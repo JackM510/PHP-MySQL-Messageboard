@@ -9,7 +9,8 @@ document.addEventListener("DOMContentLoaded", function() {
     // Edit post 'cancel' btn & outside click handler
     function cancelEditPost(postId) {
         const img = document.querySelector(`.post-picture-${postId}`);
-        const imgUploadBtn = document.querySelector(`.post-img-upload-btn-${postId}`);
+        const imgInput = document.querySelector(`.post-img-upload-${postId}`);
+        const imgUploadBtn = document.querySelector(`.post-img-upload-btn-${postId}`);        
         const likeBtn = document.querySelector(`.post-like-btn-${postId}`);
         const commentsBtn = document.querySelector(`.post-comment-btn-${postId}`);
         const paragraph = document.querySelector(`.post-description-${postId}`);
@@ -30,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
         commentsBtn.style.display = "block";
         paragraph.style.display = "block";
         // Hide
+        imgInput.value = "";
         textarea.value = textarea.dataset.originalValue;
         textarea.setAttribute("hidden", "true");
         textarea.setAttribute("disabled", "true");
@@ -117,17 +119,19 @@ document.addEventListener("DOMContentLoaded", function() {
         const postForm = document.querySelector(`.edit-post-form-${postId}`);
         const postDropdown = document.querySelector(`.post-dropdown-${postId}`);
         const img = document.querySelector(`.post-picture-${postId}`);
-        const imgUploadBtn = document.querySelector(`.post-img-upload-btn-${postId}`);
+        const imgInput = document.querySelector(`.post-img-upload-${postId}`);
+        const imgUploadBtn = document.querySelector(`.post-img-upload-btn-${postId}`);       
         const paragraph = document.querySelector(`.post-description-${postId}`);
         const textarea = document.querySelector(`.post-textarea-${postId}`);
         const btnGroup = document.querySelector(`.edit-post-btn-group-${postId}`);
         const postLikeBtn = document.querySelector(`.post-like-btn-${postId}`);
         const viewCommentsBtn = document.querySelector(`.post-comment-btn-${postId}`);
         
+        
         // Show form elements to update the post
         button.addEventListener("click", function() {
             if (img) {
-                const imgSrc = img.getAttribute("src")?.trim(); // Get img src
+                const imgSrc = img.src; // Get img src
                 const isValidImage = imgSrc &&
                     !imgSrc.includes("index.php") &&
                     !imgSrc.includes("profile.php") &&
@@ -148,6 +152,7 @@ document.addEventListener("DOMContentLoaded", function() {
             postLikeBtn.style.display = "none";
             viewCommentsBtn.style.display = "none";
             // Display  
+            imgInput.value = "";
             textarea.dataset.originalValue = textarea.value;
             imgUploadBtn.style.display ="block";
             btnGroup.style.display = "block";
@@ -198,8 +203,8 @@ document.addEventListener("DOMContentLoaded", function() {
             if (file) {
                 const reader = new FileReader();
                 reader.onload = function(e) {
-                    imgTag.src = e.target.result; // Update img preview
-                    imgTag.style.display = "block"; // Make sure img is visible
+                    imgTag.src = e.target.result;
+                    imgTag.style.display = "block";
                 };
                 reader.readAsDataURL(file);
             }
@@ -259,11 +264,10 @@ document.addEventListener("DOMContentLoaded", function() {
             buttonGroup.style.display = "block";
             buttonGroup.classList.add("d-flex", "float-end");
         });
-
         // Outside click handler
         const outsideClickHandler = function (event) {
              if (!textarea.contains(event.target) && !buttonGroup.contains(event.target)) {
-                cancelAddComment();
+                cancelAddComment(postId);
             }
         };
         document.addEventListener("click", outsideClickHandler);

@@ -13,14 +13,13 @@ function renderPost(PDO $pdo, array $post): string {
     $post_text = htmlspecialchars($post['post_text']);
     $timestamp = date('g:iA j/n/y', strtotime($post['post_created']));
     $postTimestamp = !empty($post['post_edited']) ? "$timestamp (edited)" : $timestamp;
-    $likeCount = $post['like_count']; // Post like count
-    $commentCount = $post['comment_count']; // Post comment count
-    $liked = !empty($post['user_has_liked']); // True if logged in user has liked the post
-    $commented = !empty($post['user_has_commented']); // True if logged in user has commented on the post
+    $likeCount = $post['like_count'];
+    $commentCount = $post['comment_count']; 
+    $liked = !empty($post['user_has_liked']);
+    $commented = !empty($post['user_has_commented']);
 
     ob_start(); ?>
-    <!-- Post start -->
-    <div class="post-container">
+    <div class="post-container shadow mb-4 mb-md-5">
         <!-- Postee data & dropdown -->
         <div class="d-flex align-items-start pt-1">
             <!-- Postee profile pic & full name -->
@@ -124,8 +123,7 @@ function renderPost(PDO $pdo, array $post): string {
             </div>
         </div>
         <!-- Comment end -->
-    </div><br>
-    <!-- Post end -->
+    </div>
     <?php
     return ob_get_clean();
 }
@@ -135,8 +133,6 @@ function renderAddComment(PDO $pdo, int $postId): string {
     $postId = htmlspecialchars($postId);
     ob_start();
     ?>
-
-    <!-- Add comment start -->
     <hr>
     <div class="add-comment d-flex pt-3">
         <!-- Users profile pic -->
@@ -153,7 +149,6 @@ function renderAddComment(PDO $pdo, int $postId): string {
             </div>
         </form>
     </div>
-    <!-- Add comment end -->
     <?php
     return ob_get_clean();
 }
@@ -173,7 +168,6 @@ function renderComment(PDO $pdo, array $comment, int $postId): string {
     $liked = !empty($comment['user_has_liked']); // True if logged in user has liked the comment
 
     ob_start(); ?>
-    <!-- Comment start -->
     <div class="comment-<?= $postId ?>">
         <hr>
         <div class="d-flex align-items-start">
@@ -230,8 +224,7 @@ function renderComment(PDO $pdo, array $comment, int $postId): string {
                 </div>
             </form>
         </div>
-    </div>
-    <!-- Comment end --> 
+    </div> 
     <?php
     return ob_get_clean();
 }
@@ -258,7 +251,6 @@ function getPosts($pdo, $profile_id = null) {
     // Execute SQL SELECT
     $stmt->execute();
     $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
     // Render posts
     if ($posts) {
         foreach ($posts as $post) {
