@@ -9,8 +9,8 @@
         exit();
     }
 
-    $email = isset($_COOKIE['user_login']) ? $_COOKIE["user_login"] : ""; // Cookie for email address
-    $displayForm = isset($_SESSION['display_form']) ? $_SESSION['display_form'] : "login"; // Keep the current form active after a form submit
+    $email = isset($_COOKIE['user_login']) ? $_COOKIE["user_login"] : ""; // Cookie for email
+    $displayForm = isset($_SESSION['display_form']) ? $_SESSION['display_form'] : "login"; // Keep current form active after a form submit
     unset($_SESSION['display_form']);
 ?>
 <!DOCTYPE html>
@@ -61,7 +61,7 @@
                 </div>   
             </form>
         </div>
-        <div id="signup-tab" class="text-center mt-3" style="cursor:pointer;">Don't have an account? Sign Up</div>
+        <div id="signup-tab" class="text-center mt-3">Don't have an account? Sign Up</div>
     </div>
 
     <!-- Signup -->
