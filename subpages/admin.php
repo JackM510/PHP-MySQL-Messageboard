@@ -67,8 +67,8 @@
                 <!-- Heading & Return Btn -->
                 <div class="position-relative d-flex justify-content-center align-items-center text-center mt-5 mb-5">
                     <span id="return-span">
-                        <button id="return-btn" class="btn btn-sm btn-secondary" title="Return to user list">
-                            <i class="bi bi-arrow-left"></i>
+                        <button id="return-btn" class="btn btn-sm" title="Return to user list">
+                            <span class="text-danger text-decoration-underline" style="text-underline-offset: 2px;"><i class="bi bi-arrow-left me-1"></i>Back</span>
                         </button>           
                     </span>
                     <div>
@@ -78,12 +78,12 @@
             
                 <div class="row">
                     <!-- First Name -->
-                    <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="col-12 col-sm-6 col-lg-4 mb-3">
                         <label class="pb-1"><strong>First Name</strong></label>
                         <input id="first-name-input" class="form-control" type="text" disabled>
                     </div>
                     <!-- Last Name -->
-                    <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="col-12 col-sm-6 col-lg-4 mb-3">
                         <label class="pb-1"><strong>Last Name</strong></label>
                         <input id="last-name-input" class="form-control" type="text" disabled>
                     </div>
@@ -93,12 +93,12 @@
                         <input id="email-input" class="form-control" type="text" disabled>
                     </div>
                     <!-- User ID -->
-                    <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="col-12 col-sm-6 col-lg-4 mb-3">
                         <label class="pb-1"><strong>User ID</strong></label>
                         <input id="userid-input" class="form-control" type="text" disabled>
                     </div>
                     <!-- Profile ID -->
-                    <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="col-12 col-sm-6 col-lg-4 mb-3">
                         <label class="pb-1"><strong>Profile ID</strong></label>
                         <input id="profileid-input" class="form-control" type="text" disabled>
                     </div>
