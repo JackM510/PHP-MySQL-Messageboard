@@ -29,7 +29,7 @@
     <!-- CSS & JS to fetch ALL posts from mysql -->
     <link href="<?= CSS_FETCH_POSTS ?>" rel="stylesheet">
     <script type="module" src="<?= JS_FETCH_POSTS?>"></script>
-    <title>Message Board</title>
+    <title>Messageboard</title>
 </head>
 <body>
     <!-- Navbar -->
@@ -41,7 +41,7 @@
             <?php 
                 // Logic for welcome heading
                 $heading_text = isset($_SESSION['first_name']) 
-                    ? 'Hi ' . htmlspecialchars($_SESSION['first_name']) . ', share on Message Board!'
+                    ? 'Hi ' . htmlspecialchars($_SESSION['first_name']) . ', share on Messageboard!'
                     : '<a href="'.LOGIN_URL.'" class="nav-link">Sign-in to post and comment!</a>';
                     
                 echo '<div id="welcome-msg">
