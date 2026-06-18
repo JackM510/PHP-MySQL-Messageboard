@@ -40,7 +40,6 @@ define('ACTION_UPDATE_EMAIL', APP_BASE_PATH . '/actions/update_email.php');
 define('ACTION_UPDATE_PASSWORD', APP_BASE_PATH . '/actions/update_password.php');
 // Icons
 define('ICON_HOME', APP_BASE_PATH . '/assets/icon/forum.png');
-define('ICON_PROFILE', APP_BASE_PATH . '/assets/icon/profile.png');
 // CSS
 define('CSS_ACCOUNT', APP_BASE_PATH . '/assets/CSS/account.css');
 define('CSS_ADMIN', APP_BASE_PATH . '/assets/CSS/admin.css');
