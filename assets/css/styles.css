@@ -3,41 +3,36 @@ body {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
-
-/* Triggered by JS after load */
 body.fade-in {
     opacity: 1;
-}
-  
+} 
 textarea {
     resize: none !important;
 }
-
-/* font styles */
-h5 {
-    font-size: 18px !important;
+input.form-control,
+textarea.form-control {
+    border: 1px solid silver !important;
 }
-
+h5 {
+    font-size: 1.125rem !important;
+}
+@media (min-width: 576px) {
+    h5 {
+        font-size: 1.25rem !important;
+    }
+}
 /* flash classes */
 .error-flash {
-    font-size: 16px;
+    font-size: 1rem;
     color: red;
 }
-
 .success-flash {
-    font-size: 16px;
+    font-size: 1rem;
     color: green;
 }
-
 /* Shared classes */
-.break-text{
+.break-text {
     word-wrap: break-word;      
     overflow-wrap: break-word;   
     word-break: break-word;
-}
-
-@media (min-width: 576px) {
-    h5 {
-        font-size: 20px !important;
-    }
 }

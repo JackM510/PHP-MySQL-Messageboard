@@ -3,56 +3,50 @@
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
-
 #user-search.fade-in,
 #view-profile.fade-in {
   opacity: 1;
 }
-
 #scrollbox-wrapper {
     border: 1px solid #ccc;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     overflow: hidden;
     background: #fdfdfd;
 }
-  
 #scrollbox-header {
   display: flex;
   gap: 3.333%;
   box-sizing: border-box;
   font-weight: bold;
-  padding: 16px;
+  padding: 1rem;
   background-color: #eee;
   position: sticky;
   top: 0;
   z-index: 2;
   border-bottom: 1px solid #ccc;
 }
-  
 /* Scrollable body */
 #scrollbox-container {
-  max-height: 500px;
+  max-height: 50vh;
   overflow-y: auto;
-  padding-bottom: 8px;
+  padding-bottom: 0.5rem;
 }
-  
 /* Rows */
 .user-row {
   display: flex;
   gap: 3.333%;
   box-sizing: border-box;
-  padding: 16px;;
+  padding: 1rem;
   background-color: #fff;
-  margin-bottom: 8px;
-  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  border-radius: 0.375rem;
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
 .user-row:hover {
   background-color: #eef;
 }
-  
-/* Responsive flex layout */
+/* Flex layout */
 .user-id, .profile-id, .user-email, .user-role,
 .header-uid, .header-pid, .header-email, .header-role {
   text-align: left;
@@ -61,19 +55,16 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
 .user-id, .header-uid  { flex: 0 0 15%; max-width: 15%; }
 .profile-id, .header-pid { flex: 0 0 15%; max-width: 15%; }
 .user-email, .header-email { flex: 0 0 45%; max-width: 45%; }
 .user-role, .header-role { flex: 0 0 15%; max-width: 15%; }
-
 #return-span {
   position: absolute;
   top: 50%;
   left:0;
   transform: translateY(-50%); 
 }
-
 #first-name-input,
 #last-name-input,
 #userid-input,
@@ -83,15 +74,12 @@
 #role-input {
   background: #FAFAFA !important;
 }
-
-/* Small devices */
 @media (min-width: 576px) {
   #user-search,
   #view-profile {
     width: 75%;
     margin: 0 auto;
   }
-
   #update-email-body,
   #update-pw-body,
   #delete-account-body {

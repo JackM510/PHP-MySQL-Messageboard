@@ -1,15 +1,12 @@
 #accordian {
     width: 100%;
 }
-
 #update-email-body,
 #update-pw-body,
 #delete-account-body {
     width: 100%;
     max-width: 100%;
 }
-
-/* Small devices */
 @media (min-width: 576px) {
     #update-email-body,
     #update-pw-body,
@@ -18,8 +15,6 @@
         max-width: 75%;
     }
 }
-
-/* Large devices */
 @media (min-width: 992px) {
     #update-email-body,
     #update-pw-body,
@@ -28,8 +23,6 @@
         max-width: 50%;
     }
 }
-
-/* XL devices */
 @media (min-width: 1200px) {
     #accordian {
         width: 75%;

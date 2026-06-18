@@ -1,11 +1,9 @@
 #new-post-container {
-    margin-top: 24px;
+    margin-top: 1.5rem;
 }
-
 #new-post-form {
     width: 100%;
 }
-
 #new-post-img {
     display: none;
     object-position: center;
@@ -13,36 +11,28 @@
     aspect-ratio: 1 / 1;
     width: 100%;
 }
-
 #image-upload-btn {
     display: none;
     border: none;
 }
-
 #image-upload-btn i {
-    font-size: 18px;
+    font-size: 1.125rem;
 }
-
 #new-post-textarea {
     border-color: #DEE2E6;
     padding: 5px;
 }
-
 #new-post-btn-group {
     display: none;
 }
-
-/* Small devices */
 @media (min-width: 576px) {
     #new-post-container {
-        margin-top: 48px;
+        margin-top: 3rem;
     }
     #new-post-form {
         width: 100%;
     }
 }
-
-/* Large devices */
 @media (min-width: 992px) {
     #new-post-img {
         aspect-ratio: 4 / 3;

@@ -2,17 +2,13 @@
     width: 100%;
     padding: 0 !important;
 }
-
 #welcome-msg {
-    padding: 0 16px;
+    padding: 0 1rem;
     text-align: center;
 }
-
 #index-all-posts {   
-    margin-top: 24px;   
+    margin-top: 1.5rem;   
 }
-
-/* Small devices */
 @media (min-width: 576px) {
     #index-container {
         padding: auto;
@@ -21,25 +17,19 @@
         padding: 0;
     }
     #index-all-posts {   
-        margin-top: 48px;   
+        margin-top: 3rem;   
     }
 }
-
-/* Medium devices */
 @media (min-width: 768px) {
     #index-container {
         width: 75%;
     }
 }
-
-/* Large devices */
 @media (min-width: 992px) {
     #index-container {
         width: 50%;
     }
 }
-
-/* XL devices */
 @media (min-width: 1280px) {
     #index-container {
         width: 40%;

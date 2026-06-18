@@ -1,66 +1,56 @@
 /* Post styles */
 .post-container {
-    border-top: #DEE2E6 solid 2px;
-    border-bottom: #DEE2E6 solid 2px;
-    padding: 16px;
+    border-top: silver solid 2px;
+    border-bottom: silver solid 2px;
+    padding: 1rem;
     overflow: hidden;
 }
-
 .post-profile-picture,
 .comment-profile-picture {
     object-fit: cover;
     aspect-ratio: 1 / 1;
     flex-shrink: 0;
-    height: 30px;
-    width: 30px;
+    height: 1.875rem;
+    width: 1.875rem;
 }
-
 [class^="post-picture-"] {
     object-position: center;
     object-fit: cover;
     aspect-ratio: 1 / 1;
     width: 100%;
 }
-
 .post-profile-link {
     text-decoration: none;
     color: inherit;
     cursor: pointer;
     white-space: normal;
 }
-
 [class^="post-picture-"][src=""] {
     display: none !important;
 }
-
 [class^="post-options-"] ,
 [class^="comment-options-"] {
     cursor: pointer;
 }
-
 [class^="post-options-"] i,
 [class^="comment-options-"] i {
     color: grey; 
-    font-size: 20px;
+    font-size: 1.25rem;
 }
-
 [class^="post-img-upload-btn-"] {
     border: none;
     display: none;
 }
-
 [class^="post-img-upload-btn-"] i {
-    font-size: 16px !important;
+    font-size: 1rem !important;
 }
-
 [class^="post-like-btn-"],
 [class^="comment-like-btn-"],
 [class^="post-comment-btn-"] {
     border: none !important;
-    padding: 4px !important;
-    font-size: 16px !important;
+    padding: 0.5rem !important;
+    font-size: 1rem !important;
 }
-
 [class^="post-textarea-"], 
 [class^="comment-textarea-"] {
     width: 100%;
@@ -68,78 +58,54 @@
     padding: 5px;
     border-color: #DEE2E6;
 }
-
 /* Edit Post styles */
 .edit-post-dropdown-item:hover {
     background-color: #f8f9fa !important;
 }
-
 .edit-post-dropdown-item:active {
     background-color: #0d6efd !important;
     color: #fff !important;
 }
-
 [class^="edit-post-btn-group-"] {
     display: none;
 }
-
 /* Add Comment styles */
 [class^="add-comment-textarea-"] {
     border-color: #DEE2E6;
     padding: 5px;
     transition: height 0.2s ease;
 }
-
 [class^="add-comment-btns-"],
 [class^="edit-comment-btns-"] {
     display: none;
 }
-
 /* Existing Comments & Edit comment styles */
 [class^="comment-section-"] {
     display: none;
 }
-
 [class^="comment-dropdown-"] {
-    height: 20px;
+    height: 1.25rem;
 }
-
 .edit-comment-dropdown-item:hover {
     background-color: #f8f9fa !important;
 }
-
 .edit-comment-dropdown-item:active {
     background-color: #0d6efd !important;
     color: #fff !important;
 }
-
 .post-timestamp,
 .comment-timestamp {
     color: grey;
 }
-
 [class^=".view-more-comments-wrapper-"] {
     display: none;
 }
-
-/* Small devices */
 @media (min-width: 576px) {
     .post-container {
-        border: #DEE2E6 solid 2px;
-        padding: 24px;
+        border: #c7cace solid 2px;
+        padding: 1.5rem;
     }
 }
-
-/* Medium devices */
-@media (min-width: 768px) {
-    .post-profile-picture,
-    .comment-profile-picture {
-        height: 30px;
-        width: 30px;
-    }
-}
-
-/* Large devices */
 @media (min-width: 992px) {
     [class^="post-picture-"] {
         aspect-ratio: 4 / 3;
