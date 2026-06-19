@@ -137,7 +137,7 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`post_id`, `user_id`, `post_picture`, `post_text`, `post_created`, `post_edited`) VALUES
-(1, 1, '/uploads/profiles/1/posts/1/Messenger_creation_5410702A-194B-4210-B33B-E9F9870842E9.jpeg', 'Upstream wander at Minyon Falls, NSW 💦🌿', '2025-09-12 01:21:23', NULL),
+(1, 1, '/uploads/profiles/1/posts/1/722073897_2094318384810211_7140089701137673040_n.jpg', 'Cold spring day at Port Campbell VIC 🌊', '2025-09-12 01:21:23', NULL),
 (2, 2, '/uploads/profiles/2/posts/2/pexels-lucasfonseca-2216350.jpg', 'Chasing flowers, catching smiles🌻😎', '2025-09-12 01:31:22', NULL),
 (3, 3, '/uploads/profiles/3/posts/3/pexels-bri-schneiter-28802-346529.jpg', 'Chilly morning at Aoraki/Mount Cook National Park, New Zealand ❄️🏔️', '2025-09-12 01:34:17', NULL),
 (4, 4, '/uploads/profiles/4/posts/4/pexels-wendywei-1540338.jpg', 'Good friends, great music, best memories at Splendour in the Grass 🎶❤️', '2025-09-12 01:49:03', NULL),
@@ -150,7 +150,7 @@ INSERT INTO `posts` (`post_id`, `user_id`, `post_picture`, `post_text`, `post_cr
 (13, 9, '/uploads/profiles/9/posts/13/pexels-agustin-villalba-589020055-17206877.jpg', 'Japan served up the goods… we just showed up 🏂❄️', '2025-09-18 00:39:43', NULL),
 (14, 10, '/uploads/profiles/10/posts/14/istockphoto-1464525180-612x612.jpg', 'Double shot of us ☕😉', '2025-09-18 00:52:51', NULL),
 (15, 3, '/uploads/profiles/3/posts/15/pexels-pixabay-206359.jpg', 'Peaks in the clouds, fire in the sky 🔥🏔️', '2025-09-18 00:59:34', NULL),
-(16, 1, '/uploads/profiles/1/posts/16/Messenger_creation_AF805715-F619-4F51-AE74-3184472EBDE1.jpeg', 'Sunshine Coast Australia day 2025 ☀️😎', '2025-09-18 01:42:41', NULL),
+(16, 1, '/uploads/profiles/1/posts/16/723995367_2058432778891536_2477943076905226413_n.jpg', 'Northern Rivers sunset over the mountains 🌄', '2025-09-18 01:42:41', NULL),
 (17, 8, '/uploads/profiles/8/posts/17/pexels-elletakesphotos-1549280.jpg', 'Great vibes with great people ❤️🍷📸', '2025-09-18 01:46:45', NULL),
 (18, 7, '/uploads/profiles/7/posts/18/pexels-jacob-riesel-82256039-33138747.jpg', 'Rocky paths, smooth vibes with a great crew🏝️', '2025-09-18 02:17:16', NULL),
 (19, 6, '/uploads/profiles/6/posts/19/pexels-roman-odintsov-8180510.jpg', 'Your daily reminder that flowers make everything better 🌼💛', '2025-09-18 02:27:19', NULL),
@@ -346,7 +346,7 @@ CREATE TABLE `profiles` (
 --
 
 INSERT INTO `profiles` (`profile_id`, `user_id`, `location`, `occupation`, `bio`, `profile_picture`) VALUES
-(1, 1, 'Ballarat, VIC, Australia', 'Web Developer / IT Systems Manager', 'Creator of the Messageboard application 💻🌐', '/uploads/profiles/1/profile_picture/68c37518209ff_Messenger_creation_080B7D02-387F-44D0-95A6-D5D6EB3009FF.jpeg'),
+(1, 1, 'Northern Rivers, NSW, Australia', 'Web Developer', 'Creator of the Messageboard application 💻🌐', '/uploads/profiles/1/profile_picture/Messenger_creation_5410702A.jpg'),
 (2, 2, 'Brisbane, QLD, Australia', 'Graphic Designer', 'Sunshine chaser 🌞 | Coffee lover ☕️ | Capturing life in colour 🎨', '/uploads/profiles/2/profile_picture/68c3778a03a30_pexels-alipazani-2613260.jpg'),
 (3, 3, 'Melbourne, VIC, Australia', 'Photographer', 'Turning everyday scenes into timeless stories 📸✨', '/uploads/profiles/3/profile_picture/68c3787fbf6af_pexels-phalgunnmaharishi-33539378.jpg'),
 (4, 4, 'Sydney, NSW, Australia', 'Nursing Student', 'Beach days, road trips, and chasing every adventure 🌴✈️', '/uploads/profiles/4/profile_picture/68c37baa77c2c_istockphoto-899161162-612x612.jpg'),
