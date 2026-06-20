@@ -1,8 +1,54 @@
-# PHP Messageboard
+# PHP MySQLMessageboard
 
-A fully-featured PHP Messageboard application with complete CRUD functionality for users, profiles, posts, and comments. Built with Bootstrap 5, HTML, CSS, JavaScript, PHP, and MySQL, this project demonstrates a responsive, production‑style client–server application. It includes 15 pre‑loaded user profiles and over 20 sample posts to illustrate how the live Messageboard feed would appear in a real‑world environment.
+A fully-featured Messageboard application with complete CRUD functionality for users, profiles, posts, and comments. Built with Bootstrap 5, JavaScript, PHP, and MySQL, this project demonstrates a responsive, production‑style client–server application. It includes 15 pre‑loaded user profiles and over 20 sample posts to illustrate how the live Messageboard would appear in a real‑world environment.
 
-# Features
+
+## Demo
+
+
+### Screenshots (Desktop)
+<div style="display: flex; flex-wrap: wrap; gap: 16px;">
+  <img src="demo/desktop/desktop1-index.php.png" width="100%" />
+  <img src="demo/desktop/desktop2-login.php.png" width="100%" />
+  <img src="demo/desktop/desktop3-index.php.png" width="100%" />
+  <img src="demo/desktop/desktop4-index.php.png" width="100%" />
+  <img src="demo/desktop/desktop5-profile.php.png" width="100%" />
+  <img src="demo/desktop/desktop6-account.php.png" width="100%" />
+  <img src="demo/desktop/desktop7-admin.php.png" width="100%" />
+  <img src="demo/desktop/desktop8-admin.php.png" width="100%" />
+</div>
+
+### Video (Desktop)
+<div style="display: flex;">
+  <img src="demo/desktop/desktop-demo.gif" width="100%" />
+</div>
+
+### Screenshots (Mobile)
+<div style="display: flex; flex-wrap: wrap; gap: 16px;">
+  <img src="demo/mobile/mobile1-index.php.png" width="200" />
+  <img src="demo/mobile/mobile2-login.php.png" width="200" />
+  <img src="demo/mobile/mobile3-index.php.png" width="200" />
+  <img src="demo/mobile/mobile4-index.php.png" width="200" />
+  <img src="demo/mobile/mobile5-profile.php.png" width="200" />
+  <img src="demo/mobile/mobile6-account.php.png" width="200" />
+  <img src="demo/mobile/mobile7-admin.php.png" width="200" />
+  <img src="demo/mobile/mobile8-admin.php.png" width="200" />
+</div>
+
+### Video (Mobile)
+<div style="display: flex;">
+  <img src="demo/mobile/mobile-demo.gif" width="auto" />
+</div>
+
+
+
+
+
+
+
+
+
+## Features
 - **Responsive Design:** works seamlessly across devices and browsers using CSS media queries and JavaScript.
 - **Navbar:** quick links to all subpages, with the brand image linking back to the home feed (index.php).
 - **User Authentication:** login.php lets users log in or create a new account via the signup option.
@@ -14,28 +60,43 @@ A fully-featured PHP Messageboard application with complete CRUD functionality f
 - **Post Creation (create_post.php):** shared component for adding new posts on both the main feed and profile pages.
 - **Display Posts (fetch_posts.php):** shared component for displaying all posts on the main feed or filtering posts by user on profile pages.
 
-# Screenshots
-- This project includes a 'screenshot' directory with images of the application for both desktop and mobile views, allowing for easy viewing without the need to clone or download the repository.
 
-# Demo Login
+## How It Works
+
+
+## Tech Stack
+- Bootstrap 5
+- JavaScript
+- PHP
+- MySQL
+- Xampp
+
+## Installation
+1. Clone the repository to your local machine.
+2. Start your Apache localhost environment and MySQL services.
+3. Create a new database in MySQL named 'messageboard' and set the collation to `utf8mb4_general_ci`.
+4. Import the schmea/data from 'db/messageboard.sql' into the new database.
+5. Duplicate '.env-example' in the projects root directory and name the file '.env'. 
+6. You can either use MySQLs default credentials or enter your unique MySQL credentials in the .env file.
+7. Run the application on your local server at `http://localhost/PHP-MySQL-Messageboard/index.php`.
+
+## Demo Login
 - You can explore the application without creating an account by using one of the demo profiles.  
 - Email and password details for these accounts are listed in `db/user_details.xlsx`.
 
-# Installation
-1. Clone the repository to your local machine.
-2. Create a new database in MySQL named 'messageboard' and set the collation to `utf8mb4_general_ci` (for full UTF‑8 support, including emojis).
-3. Import the schmea/data from 'db/messageboard.sql' into the new database.
-4. Create a local MySQL user and grant permissions by running:
-- CREATE USER 'jackm'@'localhost' IDENTIFIED BY 'Zr8!vLx@29eQ#fT1';
-- GRANT ALL ON messageboard.* TO 'jackm'@'localhost';
-6. Run the application on your local server at `http://localhost/Portfolio-Messageboard/index.php`.
-
-# Usage
-1. Sign up or log in via login.php.
-2. Browse the main feed (index.php) to view posts from all users.
+##  Usage
+1. Browse the main feed (index.php) to view posts from all users.
+2. Sign up or log in via login.php or selecting the avatar icon in the navbar.
 3. Create a new post using the “Create a new post...” form on the main feed or your profile page.
 4. Like or comment on posts when logged in.
 5. View user profiles by clicking a username or avatar on a post or comment.
 6. Edit your profile from profile.php by selecting the pencil icon next to your name, or manage account settings in account.php.
 7. Admin users can access admin.php from the navbar dropdown to manage all user accounts details.
 8. Log out via the navigation bar to end your session.
+
+
+##  Future Improvements
+ - Post on other profiles.
+ - Upload videos to posts.
+ - Upload multiple media items to a post.
+ - Post notifications.
